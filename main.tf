@@ -10,7 +10,6 @@ module "alb" {
 
 module "asg" {
     source = "./modules/asg"
-    vpc_id = module.vpc.vpc_id
     subnets = module.vpc.public_subnets
     instance_type = var.instance_type
     ami_id = var.ami_id
